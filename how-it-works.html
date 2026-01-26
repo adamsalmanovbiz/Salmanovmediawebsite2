@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works — Salmanov Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            --light-gray: #F5F5F5;
+            --gray: #E0E0E0;
+            --dark-gray: #666666;
+            --near-black: #1A1A1A;
+            --red: #EF4444;
+            --red-light: #FEE2E2;
+            --red-hover: #DC2626;
+            --red-dark: #B91C1C;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: var(--white);
+            color: var(--near-black);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 300;
+        }
+        
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        h4 {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+        }
+        
+        strong {
+            font-weight: 500;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .wide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--gray);
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: var(--near-black);
+            text-decoration: none;
+        }
+        
+        .logo-bracket {
+            color: var(--dark-gray);
+        }
+        
+        .logo-name {
+            color: var(--red);
+        }
+        
+        .nav-link {
+            font-size: 0.95rem;
+            color: var(--near-black);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--red);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 5rem 0 4rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            opacity: 0.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Section */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-label {
+            color: var(--red);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .step-number {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--red);
+            line-height: 1;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .step-details {
+            background: var(--off-white);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 3px solid var(--red);
+        }
+        
+        .step-details ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .step-details li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            font-size: 1rem;
+        }
+        
+        .step-details li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+        
+        /* Team Roles */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .team-role {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-top: 3px solid var(--red);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-role:hover {
+            transform: translateY(-4px);
+        }
+        
+        .role-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--red);
+        }
+        
+        .role-description {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin: 3rem 0;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-period {
+            font-family: 'Fraunces', serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--red);
+        }
+        
+        .timeline-content h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .portfolio-item {
+            background: var(--white);
+            border: 1px solid var(--gray);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            border-color: var(--red);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .portfolio-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .portfolio-caption {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-client {
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--red);
+        }
+        
+        .portfolio-description {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--gray);
+            margin: 4rem 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-gray);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 4rem -2rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--red);
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 1.125rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            margin-top: 1.5rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--red-hover);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--gray);
+            margin-top: 4rem;
+        }
+        
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .process-step {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                margin-left: -1rem;
+                margin-right: -1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="salmanov-media.html" class="logo">
+                    <span class="logo-bracket">&lt;</span><span class="logo-name">SALMANOV</span><span class="logo-bracket">/&gt;</span>
+                </a>
+                <a href="salmanov-media.html" class="nav-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>How It Works</h1>
+                <p class="hero-subtitle">The complete breakdown of our process, team, and what it takes to build distribution that compounds.</p>
+            </div>
+        </section>
+
+        <!-- The Full Process -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label">The Process</span>
+                <h2>From Zero to Compounding Distribution</h2>
+                <p>Most agencies talk about strategy. We build actual infrastructure. Here's exactly how we do it.</p>
+                
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Onboarding & Discovery</h3>
+                            <p>We start by understanding your world. Your business, your audience, your goals, and what you're actually building.</p>
+                            <div class="step-details">
+                                <ul>
+                                    <li>Deep dive call to understand your story</li>
+                                    <li>Audit existing content (if any)</li>
+                                    <li>Define content pillars and messaging</li>
+                                    <li>Set up documentation systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Content Capture Setup</h3>
+                            <p>We establish how content gets captured. Either we record ourselves, or we teach someone on your team (or you) to record, or a mix of both.</p>
+                            <div class="step-details">
+                                <ul>
+                                    <li>Equipment recommendations (if needed)</li>
+                                    <li>Recording workflows and templates</li>
+                                    <li>Weekly/monthly content capture schedule</li>
+                                    <li>Asynchronous communication system (Slack, voice notes, screen recordings)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Content Production</h3>
+                            <p>Raw footage and ideas become structured stories. Our team handles everything: editing, scripting, design, optimization.</p>
+                            <div class="step-details">
+                                <ul>
+                                    <li>Video editing (short-form & long-form)</li>
+                                    <li>Copywriting for captions and hooks</li>
+                                    <li>Graphic design and thumbnails</li>
+                                    <li>Platform-specific formatting (TikTok, Instagram, LinkedIn, YouTube)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Distribution & Publishing</h3>
+                            <p>Content goes live daily across all platforms. We handle scheduling, posting, and initial engagement.</p>
+                            <div class="step-details">
+                                <ul>
+                                    <li>Daily posting across Instagram, TikTok, LinkedIn, YouTube</li>
+                                    <li>Optimized posting times per platform</li>
+                                    <li>Community management and engagement</li>
+                                    <li>Cross-platform repurposing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>Optimization & Reporting</h3>
+                            <p>We analyze what works, what doesn't, and double down on winners. Content gets better every week.</p>
+                            <div class="step-details">
+                                <ul>
+                                    <li>Weekly performance analysis</li>
+                                    <li>A/B testing hooks, formats, and topics</li>
+                                    <li>Monthly strategy calls</li>
+                                    <li>Reporting on growth, reach, and engagement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- The Team We Build -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label">The Team</span>
+                <h2>The Content Team We Build For You</h2>
+                <p>To do this yourself, you'd need to hire all of these roles. We handle it all as one cohesive system.</p>
+                
+                <div class="team-grid">
+                    <div class="team-role">
+                        <div class="role-title">Content Strategist</div>
+                        <p class="role-description">Defines what you talk about, how you position yourself, and what stories to tell. Ensures everything ladders up to your goals.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Videographer</div>
+                        <p class="role-description">Captures the raw footage. Whether it's in-person shoots or teaching your team how to self-record with quality.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Video Editor</div>
+                        <p class="role-description">Turns raw footage into tight, engaging stories. Handles pacing, cuts, transitions, and all the technical work.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Copywriter</div>
+                        <p class="role-description">Writes hooks, captions, scripts, and CTAs. Makes sure the words hit as hard as the visuals.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Graphic Designer</div>
+                        <p class="role-description">Creates thumbnails, overlays, quote cards, and any visual assets needed to make content stand out.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Social Media Manager</div>
+                        <p class="role-description">Handles posting, scheduling, engagement, and community management. Keeps the machine running daily.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Creative Director</div>
+                        <p class="role-description">Oversees the entire operation. Ensures quality, consistency, and that everything aligns with your brand.</p>
+                    </div>
+
+                    <div class="team-role">
+                        <div class="role-title">Performance Analyst</div>
+                        <p class="role-description">Tracks metrics, identifies winners, and optimizes strategy. Makes sure content improves week over week.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 3rem; font-size: 1.125rem; opacity: 0.8;">That's 8 specialized roles. You get all of them for less than one full-time hire.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Timeline -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label">Timeline</span>
+                <h2>What to Expect</h2>
+                <p>Content marketing is a compounding game. Here's the realistic timeline.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-period">Week 1-2</div>
+                        <div class="timeline-content">
+                            <h4>Setup & Foundation</h4>
+                            <p>Onboarding, systems setup, content capture workflows established. First batch of content goes into production.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-period">Week 3-4</div>
+                        <div class="timeline-content">
+                            <h4>Launch</h4>
+                            <p>Daily content starts publishing across platforms. Initial audience response and engagement tracking begins.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 2-3</div>
+                        <div class="timeline-content">
+                            <h4>Optimization</h4>
+                            <p>Data comes in. We identify what's working and double down. Content quality and performance improve week over week.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 4-6</div>
+                        <div class="timeline-content">
+                            <h4>Momentum</h4>
+                            <p>Distribution compounds. You start getting recognized. Inbound opportunities increase. The system runs smoothly in the background.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 6+</div>
+                        <div class="timeline-content">
+                            <h4>Leverage</h4>
+                            <p>Your presence is established. Can layer in lead magnets, offers, or ads on top of proven content. ROI becomes clear.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Portfolio -->
+        <section class="section">
+            <div class="wide-container">
+                <span class="section-label">Our Work</span>
+                <h2>Examples of What We've Built</h2>
+                <p>Real clients. Real results. Real content that compounds.</p>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/E93qk-wfIkQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Founder Journey</div>
+                            <p class="portfolio-description">Building in public, documenting the real journey from startup to scale.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Client Name</div>
+                            <p class="portfolio-description">Brief description of the project and results achieved.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Client Name</div>
+                            <p class="portfolio-description">Brief description of the project and results achieved.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Client Name</div>
+                            <p class="portfolio-description">Brief description of the project and results achieved.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Client Name</div>
+                            <p class="portfolio-description">Brief description of the project and results achieved.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-embed">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                        </div>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-client">Client Name</div>
+                            <p class="portfolio-description">Brief description of the project and results achieved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Build Your Distribution?</h2>
+                <p>We work closely with a limited number of clients to ensure quality and results.</p>
+                <a href="#apply" class="cta-button">Apply to Work With Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Salmanov Media • NYC</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Free Content Piece — Salmanov Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            --light-gray: #F5F5F5;
+            --gray: #E0E0E0;
+            --near-black: #1A1A1A;
+            --red: #EF4444;
+            --red-light: #FEE2E2;
+            --red-hover: #DC2626;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: var(--white);
+            color: var(--near-black);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-family: 'Courier New', monospace;
+            font-size: 1.125rem;
+            color: var(--near-black);
+            text-decoration: none;
+        }
+        
+        .logo-bracket {
+            color: var(--dark-gray);
+        }
+        
+        .logo-name {
+            color: var(--red);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+        
+        .badge {
+            background: var(--red-light);
+            color: var(--red);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            opacity: 0.7;
+            margin-bottom: 3rem;
+        }
+        
+        /* Value Props */
+        .value-props {
+            display: grid;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+        
+        .value-icon {
+            color: var(--red);
+            font-size: 1.5rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        
+        .value-text {
+            flex: 1;
+        }
+        
+        .value-text strong {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .value-text p {
+            font-size: 0.95rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: var(--light-gray);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--gray);
+            border-radius: 4px;
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--red);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 1.125rem 2rem;
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-family: 'Fraunces', serif;
+            font-weight: 500;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background: var(--red-hover);
+            transform: translateY(-2px);
+        }
+        
+        .submit-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .success-message h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .success-message p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Calendly Container */
+        .calendly-container {
+            min-height: 700px;
+            margin-top: 2rem;
+        }
+        
+        /* Testimonial */
+        .testimonial-note {
+            background: var(--off-white);
+            padding: 2rem;
+            border-left: 3px solid var(--red);
+            margin: 3rem 0;
+            font-style: italic;
+        }
+        
+        .testimonial-note strong {
+            font-style: normal;
+            font-weight: 500;
+            color: var(--red);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid var(--gray);
+            margin-top: 4rem;
+        }
+        
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 0 2rem;
+            }
+            
+            .form-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="salmanov-media.html" class="logo">
+                <span class="logo-bracket">&lt;</span><span class="logo-name">SALMANOV</span><span class="logo-bracket">/&gt;</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Hero -->
+            <section class="hero">
+                <span class="badge">Limited Offer</span>
+                <h1>Get a Free Content Piece</h1>
+                <p class="hero-subtitle">We handle everything: brainstorming, scripting, filming, editing, strategy. Just give us your idea and test how well we execute.</p>
+            </section>
+
+            <!-- Value Props -->
+            <div class="value-props">
+                <div class="value-item">
+                    <div class="value-icon">✓</div>
+                    <div class="value-text">
+                        <strong>We Handle Everything</strong>
+                        <p>Brainstorming, scripting, filming, editing, and strategy. You just give us the idea.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">✓</div>
+                    <div class="value-text">
+                        <strong>Test Our Execution</strong>
+                        <p>See firsthand how we work, how fast we move, and the quality we deliver.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-icon">✓</div>
+                    <div class="value-text">
+                        <strong>Zero Risk</strong>
+                        <p>No payment. No commitment. Just great content you get to keep.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Note -->
+            <div class="testimonial-note">
+                <strong>The only ask:</strong> If you love what we create, we'd appreciate an honest testimonial we can share. That's it.
+            </div>
+
+            <!-- Application Form -->
+            <div class="form-section" id="applicationForm">
+                <h2 class="section-title">Apply for Your Free Content Piece</h2>
+                <p class="section-subtitle">Tell us about yourself and what you need</p>
+                
+                <form id="freeContentForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company / Personal Brand</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contentType">What type of content do you need? *</label>
+                        <select id="contentType" name="contentType" required>
+                            <option value="">Select one...</option>
+                            <option value="short-form">Short-form video (TikTok, Instagram, YouTube Shorts)</option>
+                            <option value="ad-creative">Ad creative (paid social)</option>
+                            <option value="linkedin">LinkedIn post/video</option>
+                            <option value="other">Other (explain below)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Tell us about your project *</label>
+                        <textarea id="details" name="details" placeholder="What's the goal? What message do you want to convey? Any specific ideas?" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="social">Your social media handle (optional)</label>
+                        <input type="text" id="social" name="social" placeholder="@yourhandle">
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit Application →</button>
+                </form>
+            </div>
+
+            <!-- Success Message (hidden initially) -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">🎉</div>
+                <h2>Application Submitted!</h2>
+                <p>Now book a quick call so we can discuss your free content piece.</p>
+                
+                <!-- Calendly Embed -->
+                <div class="calendly-container">
+                    <!-- Replace this with your actual Calendly embed code -->
+                    <div style="min-height: 700px; background: var(--off-white); border: 1px solid var(--gray); border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 3rem; text-align: center;">
+                        <div>
+                            <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">📅 Calendar scheduling will appear here</p>
+                            <p style="font-size: 0.95rem; opacity: 0.7;">Replace this div with your Calendly embed code</p>
+                            <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.6;">Example: &lt;div class="calendly-inline-widget" data-url="https://calendly.com/yourusername/15min"&gt;&lt;/div&gt;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Salmanov Media • NYC</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('freeContentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data (you can send this to your backend/Google Sheets/Airtable)
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+                contentType: document.getElementById('contentType').value,
+                details: document.getElementById('details').value,
+                social: document.getElementById('social').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Form data:', formData);
+            
+            // Here you would typically send to your backend
+            // Example: fetch('/api/submit-application', { method: 'POST', body: JSON.stringify(formData) })
+            
+            // Show success message and Calendly
+            document.getElementById('applicationForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    </script>
+    
+    <!-- Calendly widget script (add this when you set up Calendly) -->
+    <!-- <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+</body>
+</html>
