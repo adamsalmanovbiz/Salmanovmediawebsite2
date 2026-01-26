@@ -256,7 +256,7 @@ function Home() {
                   <p className="pricing-description">Vlogs, short-form content batches, or any single high-impact project.</p>
                   <p className="pricing-description">Perfect for testing us out, seeing how we work, or when you just need one thing done really well.</p>
                   <p className="pricing-description">We're happy to do these.</p>
-                  <a href="#work-with-us" className="pricing-cta">Get Started →</a>
+                  <button onClick={() => document.getElementById('work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
 
                 <div className="pricing-card">
@@ -264,7 +264,7 @@ function Home() {
                   <div className="pricing-amount">$$$$/month</div>
                   <p className="pricing-description">Month-to-Month</p>
                   <p className="pricing-description">You never think about content again.</p>
-                  <a href="#work-with-us" className="pricing-cta">Get Started →</a>
+                  <button onClick={() => document.getElementById('work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
               </div>
             </div>
@@ -491,14 +491,14 @@ function Home() {
                   <p className="pricing-description">Company vlogs, product launches, team content batches, or any single high-impact project.</p>
                   <p className="pricing-description">Perfect for testing us out or when you need one thing done exceptionally well.</p>
                   <p className="pricing-description">We're happy to do these.</p>
-                  <a href="#company-work-with-us" className="pricing-cta">Get Started →</a>
+                  <button onClick={() => document.getElementById('company-work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
 
                 <div className="pricing-card">
                   <h3 className="pricing-title">Ongoing Company Storytelling & Distribution</h3>
                   <div className="pricing-amount">$$$$–$$,$$$/month</div>
                   <p className="pricing-description">Depends on scope and team size</p>
-                  <a href="#company-work-with-us" className="pricing-cta">Get Started →</a>
+                  <button onClick={() => document.getElementById('company-work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
               </div>
             </div>
