@@ -6,9 +6,8 @@ function Header({ showToggle = false, activeSection, onToggle, showBackLink = fa
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <span className="logo-bracket">&lt;</span>
-            <span className="logo-name">SALMANOV</span>
-            <span className="logo-bracket">/&gt;</span>
+            <div className="logo-dot"></div>
+            <span className="logo-text">SALMANOV MEDIA</span>
           </Link>
 
           {showBackLink && (

@@ -55,7 +55,7 @@ function Home() {
           <div className={`content-section ${activeSection === 'individual' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Own Content Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
+              <h1>Your Own <span className="red-keyword">Content</span> Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
             </div>
 
             <div className="section">
@@ -78,7 +78,7 @@ function Home() {
 
             {/* Original Content Starts Here */}
             <div className="hero">
-              <h1>Personal Brand<br />That Compounds</h1>
+              <h1>Personal Brand<br />That <span className="red-keyword">Compounds</span></h1>
             </div>
 
             <div className="section">
@@ -101,7 +101,7 @@ function Home() {
 
             <div className="section">
               <span className="section-label">The Problem</span>
-              <h2>Why Personal Brands Fail</h2>
+              <h2>Why Personal Brands <span className="red-keyword">Fail</span></h2>
               <p>Not because founders aren't interesting.<br />
                 Not because they don't have insights.</p>
               <p>They fail because:</p>
@@ -118,7 +118,7 @@ function Home() {
 
             <div className="section">
               <span className="section-label">The Solution</span>
-              <h2>The Correct Way to Run a Personal Brand</h2>
+              <h2>The <span className="red-keyword">Correct</span> Way to Run a Personal Brand</h2>
               <p>A personal brand isn't just about posting.<br />
                 It's about distribution.</p>
               <p>Done right, it should:</p>
@@ -159,24 +159,6 @@ function Home() {
               <p><strong>Or you just have us.</strong></p>
               <p>We're young, hungry, and we grew up doing content, have been doing it for years, and are addicted to becoming the best at it.</p>
               <p><strong>We work closely with everyone</strong> — we take the responsibility of leading your brand seriously. Many people and agencies have tried to do this as a done-for-you service. It's hard. But we're damn good at this, and we make it as easy and stress-free as possible for you.</p>
-            </div>
-
-            <Divider />
-
-            {/* Replace with real testimonials */}
-            <div className="section">
-              <h2>What Our Clients Say</h2>
-              <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
-                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
-                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
-                </div>
-                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
-                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
-                </div>
-                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
-                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
-                </div>
-              </div>
             </div>
 
             <Divider />
@@ -345,7 +327,7 @@ function Home() {
           <div className={`content-section ${activeSection === 'company' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Company's Content Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
+              <h1>Your Company's <span className="red-keyword">Content</span> Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
             </div>
 
             <div className="section">
@@ -366,7 +348,7 @@ function Home() {
 
             {/* Original Content Starts Here */}
             <div className="hero">
-              <h1>Company Storytelling<br />& Distribution</h1>
+              <h1>Company <span className="red-keyword">Storytelling</span><br />& Distribution</h1>
             </div>
 
             <div className="section">
