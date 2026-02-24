@@ -81,14 +81,15 @@ function HowItWorks() {
     { period: 'Month 6+', title: 'Leverage', description: 'Your presence is established. Can layer in lead magnets, offers, or ads on top of proven content. ROI becomes clear.' }
   ]
 
-  const portfolioItems = [
-    { videoId: 'E93qk-wfIkQ', client: 'Founder Journey', description: 'Building in public, documenting the real journey from startup to scale.' },
-    { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
-    { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
-    { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
-    { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
-    { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' }
-  ]
+  // Portfolio section — uncomment when real client work is ready
+  // const portfolioItems = [
+  //   { videoId: 'E93qk-wfIkQ', client: 'Founder Journey', description: 'Building in public, documenting the real journey from startup to scale.' },
+  //   { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
+  //   { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
+  //   { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
+  //   { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' },
+  //   { videoId: 'dQw4w9WgXcQ', client: 'Client Name', description: 'Brief description of the project and results achieved.' }
+  // ]
 
   return (
     <>
@@ -138,7 +139,7 @@ function HowItWorks() {
           <div className="container">
             <span className="section-label">The Team</span>
             <h2>The Content Team We Build For You</h2>
-            <p>To do this yourself, you'd need to hire all of these roles. We handle it all as one cohesive system.</p>
+            <p>Hiring these roles individually would cost $300K+/year. You get all of them for a fraction of that.</p>
 
             <div className="team-grid">
               {teamRoles.map((role, index) => (
@@ -180,29 +181,12 @@ function HowItWorks() {
 
         <Divider />
 
-        {/* Portfolio */}
+        {/* Portfolio section — uncomment when real client work is ready */}
         <section className="section">
           <div className="wide-container">
             <span className="section-label">Our Work</span>
             <h2>Examples of What We've Built</h2>
-            <p>Real clients. Real results. Real content that compounds.</p>
-
-            <div className="portfolio-grid">
-              {portfolioItems.map((item, index) => (
-                <div className="portfolio-item" key={index}>
-                  <div className="portfolio-embed">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${item.videoId}`}
-                      allowFullScreen
-                    />
-                  </div>
-                  <div className="portfolio-caption">
-                    <div className="portfolio-client">{item.client}</div>
-                    <p className="portfolio-description">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p style={{textAlign: 'center', opacity: 0.5}}>Portfolio coming soon.</p>
           </div>
         </section>
 

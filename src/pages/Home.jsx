@@ -55,7 +55,7 @@ function Home() {
           <div className={`content-section ${activeSection === 'individual' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Own Content Team.<br />Just Young Content Kids.<br />Obsessed With The Game.</h1>
+              <h1>Your Own Content Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
             </div>
 
             <div className="section">
@@ -69,9 +69,7 @@ function Home() {
                 Our rates are better because we don't have overhead.<br />
                 We're never arrogant because we're always learning.</p>
 
-              <p>Are we perfect? No.</p>
-
-              <p>But here's the promise: we'll think about your content every single day. We'll obsess over what works. We'll iterate until we find what compounds.</p>
+              <p>Here's the promise: we'll think about your content every single day. We'll obsess over what works. We'll iterate until we find what compounds.</p>
 
               <p><strong>Because your wins are how we build ours.</strong></p>
             </div>
@@ -159,8 +157,26 @@ function Home() {
               <p>For example: we have some clients where we document their life with a camera and create content from that. Others need a more scripted approach, or podcasts, or something completely different. It really just depends.</p>
               <p>To do this yourself, you'd need: a videographer, creative director, editors, graphic designer, and copywriter.</p>
               <p><strong>Or you just have us.</strong></p>
-              <p>We're young, hungry kids who grew up doing content, have been doing it for years, and are addicted to becoming the best at it.</p>
-              <p><strong>We work closely with everyone</strong> — this is no light honor of being able to lead your brand. Many people and agencies have tried to do this as a done-for-you service. It's hard. But we might be the best at this, and we make it as easy and stress-free as possible for you.</p>
+              <p>We're young, hungry, and we grew up doing content, have been doing it for years, and are addicted to becoming the best at it.</p>
+              <p><strong>We work closely with everyone</strong> — we take the responsibility of leading your brand seriously. Many people and agencies have tried to do this as a done-for-you service. It's hard. But we're damn good at this, and we make it as easy and stress-free as possible for you.</p>
+            </div>
+
+            <Divider />
+
+            {/* Replace with real testimonials */}
+            <div className="section">
+              <h2>What Our Clients Say</h2>
+              <div className="testimonials-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginTop: '2rem' }}>
+                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
+                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
+                </div>
+                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
+                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
+                </div>
+                <div className="testimonial-card" style={{ padding: '2rem', border: '1px solid var(--gray)', borderRadius: '8px' }}>
+                  <p style={{ fontStyle: 'italic', opacity: 0.6 }}>Testimonial coming soon</p>
+                </div>
+              </div>
             </div>
 
             <Divider />
@@ -241,6 +257,7 @@ function Home() {
               </ul>
               <p>If you want vibes, this isn't for you.<br />
                 If you want leverage, it is.</p>
+              <p>We currently work with founders in tech, finance, and health — if that's you, we should talk.</p>
             </div>
 
             <Divider />
@@ -261,8 +278,8 @@ function Home() {
 
                 <div className="pricing-card">
                   <h3 className="pricing-title">Ongoing Personal Content Team</h3>
-                  <div className="pricing-amount">$$$$/month</div>
-                  <p className="pricing-description">Month-to-Month</p>
+                  <div className="pricing-amount">Starts at $3,000/month</div>
+                  <p className="pricing-description">Month-to-Month. Cancel anytime.</p>
                   <p className="pricing-description">You never think about content again.</p>
                   <button onClick={() => document.getElementById('work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
@@ -328,11 +345,11 @@ function Home() {
           <div className={`content-section ${activeSection === 'company' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Company's Content Team.<br />Just Young Content Kids.<br />Obsessed With The Game.</h1>
+              <h1>Your Company's Content Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
             </div>
 
             <div className="section">
-              <p className="opening">We're not a corporate agency. We're your content team.</p>
+              <p className="opening">We're not a production house. We're your in-house content department — without the overhead.</p>
 
               <p>We handle your videography, editing, strategy, copywriting, and creative direction. Everything.</p>
 
@@ -340,9 +357,7 @@ function Home() {
                 Our rates are better because we don't have fancy offices.<br />
                 We're never arrogant because we're always learning.</p>
 
-              <p>Are we perfect? No.</p>
-
-              <p>But we'll wake up every day thinking about how to make your company more visible, more human, and more memorable.</p>
+              <p>We'll wake up every day thinking about how to make your company more visible, more human, and more memorable.</p>
 
               <p><strong>Because your growth is how we prove ourselves.</strong></p>
             </div>
@@ -406,9 +421,10 @@ function Home() {
               <p>Real people.<br />
                 Real work.<br />
                 Real momentum.</p>
+              <p>We embed with your team, document the real work happening every day, and turn it into a distribution engine that attracts customers, talent, and investors.</p>
               <p>To do this yourself, you'd need: a videographer, creative director, editors, graphic designer, and copywriter.</p>
-              <p>We're just young, hungry kids who grew up doing content, have been doing it for years, and are addicted to becoming the best at it.</p>
-              <p><strong>We work closely with everyone</strong> — this is no light honor of being able to lead your brand. Many people and agencies have tried to do this as a done-for-you service. It's hard. But we might be the best at this, and we make it as easy and stress-free as possible for you.</p>
+              <p>We're young, hungry, and we grew up doing content, have been doing it for years, and are addicted to becoming the best at it.</p>
+              <p><strong>We work closely with everyone</strong> — we take the responsibility of leading your brand seriously. Many people and agencies have tried to do this as a done-for-you service. It's hard. But we're damn good at this, and we make it as easy and stress-free as possible for you.</p>
             </div>
 
             <Divider />
@@ -496,8 +512,8 @@ function Home() {
 
                 <div className="pricing-card">
                   <h3 className="pricing-title">Ongoing Company Storytelling & Distribution</h3>
-                  <div className="pricing-amount">$$$$–$$,$$$/month</div>
-                  <p className="pricing-description">Depends on scope and team size</p>
+                  <div className="pricing-amount">Starts at $5,000/month</div>
+                  <p className="pricing-description">Scope-dependent. Month-to-month.</p>
                   <button onClick={() => document.getElementById('company-work-with-us').scrollIntoView({ behavior: 'smooth' })} className="pricing-cta">Get Started →</button>
                 </div>
               </div>
