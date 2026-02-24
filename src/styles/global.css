@@ -28,7 +28,7 @@
     --success-emerald: #059669;
     
     /* Typography */
-    --font-headline: 'Space Grotesk', sans-serif;
+    --font-headline: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 }
@@ -51,33 +51,37 @@ body {
 /* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-headline);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -1px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     color: var(--platinum-white);
 }
 
 h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    letter-spacing: -1.5px;
+    font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+    letter-spacing: -0.03em;
+    font-weight: 400;
 }
 
 h2 {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
     margin-bottom: 1rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
 }
 
 h3 {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     margin-bottom: 0.75rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.01em;
+    font-weight: 500;
 }
 
 h4 {
     font-size: clamp(1rem, 1.75vw, 1.2rem);
     margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.01em;
+    font-weight: 500;
 }
 
 p {

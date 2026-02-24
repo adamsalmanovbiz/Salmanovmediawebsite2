@@ -55,7 +55,7 @@ function Home() {
           <div className={`content-section ${activeSection === 'individual' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Own <span className="red-keyword">Content</span> Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
+              <h1>Your Own <span className="red-keyword">Content</span> Team.<br />Just Young Content Kids.<br />Obsessed With The Game.</h1>
             </div>
 
             <div className="section">
@@ -327,7 +327,7 @@ function Home() {
           <div className={`content-section ${activeSection === 'company' ? 'active' : ''}`}>
             {/* Opening Manifesto */}
             <div className="hero">
-              <h1>Your Company's <span className="red-keyword">Content</span> Team.<br />Young. Hungry. Obsessed With What Compounds.</h1>
+              <h1>Your Company's <span className="red-keyword">Content</span> Team.<br />Just Young Content Kids.<br />Obsessed With The Game.</h1>
             </div>
 
             <div className="section">
